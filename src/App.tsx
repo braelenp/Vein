@@ -429,6 +429,28 @@ const DUMMY_RECORDS: AsterankRecord[] = [
   { full_name: '1980 Tezcatlipoca',   price:    680_000_000_000,     profit:    420_000_000_000,    score: 79, spec: 'S',  dv: 5.80, moid: 0.2148, a: 1.709, orbit_class: 'AMO' },
 ]
 
+// ─── Abraxas Portal ───────────────────────────────────────────────────────────
+
+function AbraxasPortal() {
+  return (
+    <a
+      href="https://abraxas-ten.vercel.app/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group mt-2 flex items-center gap-4 rounded-2xl border border-vein-gold/20 bg-gradient-to-r from-slate-900/80 via-vein-gold/5 to-slate-900/80 p-4 transition-all duration-300 hover:border-vein-gold/45 hover:bg-vein-gold/8"
+    >
+      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-vein-gold/25 bg-vein-gold/8 transition-colors group-hover:border-vein-gold/50 group-hover:bg-vein-gold/15">
+        <span className="font-display text-xl text-vein-gold/60 group-hover:text-vein-gold/90">✦</span>
+      </div>
+      <div className="min-w-0 flex-1">
+        <p className="font-mono text-[9px] font-semibold uppercase tracking-[0.28em] text-vein-gold/55 group-hover:text-vein-gold/80">Abraxas · Lineage Control Surface</p>
+        <p className="mt-0.5 text-[11px] leading-snug text-slate-400 group-hover:text-slate-200">Govern all RWA lineages, trace asset provenance, and settle sovereign claims across the network.</p>
+      </div>
+      <span className="shrink-0 font-mono text-sm text-vein-gold/30 transition-colors group-hover:text-vein-gold/70">↗</span>
+    </a>
+  )
+}
+
 // ─── Tab: Prospect ────────────────────────────────────────────────────────────
 
 function ProspectTab({ onDeposit }: { onDeposit: (asset: VaultRightsAsset) => void }) {
@@ -654,6 +676,7 @@ function ProspectTab({ onDeposit }: { onDeposit: (asset: VaultRightsAsset) => vo
             </article>
         </div>
       )}
+      <AbraxasPortal />
     </div>
   )
 }
@@ -714,6 +737,7 @@ function OrbitalTab() {
         ))}
       </div>
       <p className="px-1 font-mono text-[9px] text-slate-500">Real-time orbital visualization · select a body to inspect trajectory and mining viability · powered by asterank.com</p>
+      <AbraxasPortal />
     </div>
   )
 }
@@ -998,6 +1022,7 @@ function ForgeTab({ onDeposit }: { onDeposit: (asset: VaultRightsAsset) => void 
           </button>
         </div>
       )}
+      <AbraxasPortal />
     </div>
   )
 }
@@ -1258,6 +1283,7 @@ function VaultTab({ assets }: { assets: VaultRightsAsset[] }) {
           ))}
         </div>
       </article>
+      <AbraxasPortal />
     </div>
   )
 }
@@ -1336,6 +1362,7 @@ function ChainTab() {
           ))}
         </div>
       </article>
+      <AbraxasPortal />
     </div>
   )
 }
@@ -1365,6 +1392,7 @@ function ProtocolTab() {
           <p className="text-xs leading-relaxed text-slate-400">{p.desc}</p>
         </article>
       ))}
+      <AbraxasPortal />
     </div>
   )
 }
@@ -1408,6 +1436,7 @@ function ClaimsTab() {
           </article>
         ))}
       </div>
+      <AbraxasPortal />
     </div>
   )
 }
